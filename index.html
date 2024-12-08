@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Montserrat:wght@700&family=Poppins:wght@400&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <input id="search-city" type="text" placeholder="Search a correct city name">
+      <button id="support-project">Support Project</button>
+    </header>
+    <main>
+      <section id="current-weather" class="current-weather">
+        <div id="temperature" class="temperature">28.6°C</div>
+        <div id="condition" class="condition">Clear Sky</div>
+        <div id="location" class="location">Ankara</div>
+        <div id="date" class="date">28 August Monday</div>
+      </section>
+      <section id="details" class="details">
+        <div id="detail-item-wind" class="detail-item">
+          <strong>Wind Speed:</strong>
+          28 km/h
+        </div>
+        <div id="detail-item-humidity" class="detail-item">
+          <strong>Humidity:</strong>
+          48%
+        </div>
+        <div id="detail-item-pressure" class="detail-item">
+          <strong>Pressure:</strong>
+          1008 hPa
+        </div>
+        <div id="detail-item-visibility" class="detail-item">
+          <strong>Visibility:</strong>
+          10 km
+        </div>
+        <div id="detail-item-sunrise" class="detail-item">
+          <strong>Sunrise:</strong>
+          06:26
+        </div>
+        <div id="detail-item-sunset" class="detail-item">
+          <strong>Sunset:</strong>
+          19:44
+        </div>
+      </section>
+      <section id="next-5-days" class="next-5-days">
+        <div id="day-template" class="day">
+          <div class="time">Made by Ashar Ali</div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
