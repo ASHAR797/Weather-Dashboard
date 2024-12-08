@@ -17,7 +17,7 @@ async function fetchWeather(cityName) {
             const data = await response.json();
             
             // Update main current weather
-            document.querySelector('.temperature').textContent = `${data.main.temp}°C`;
+            document.querySelector('.temperature').textContent = `${Math.round(data.main.temp)}°C`;
             document.querySelector('.condition').textContent = data.weather[0].description;
             document.querySelector('.location').textContent = data.name;
             document.querySelector('.date').textContent = new Date().toLocaleDateString(undefined, {
@@ -56,6 +56,19 @@ document.querySelector('header input[type="text"]').addEventListener('keypress',
         }
     }
 });
+
+// Button click event to fetch weather for entered city
+document.getElementById("getWeather").addEventListener("click",(e)=>{
+       let searchBar = document.getElementById("search-city") 
+       console.log(e)
+       const cityName = searchBar.value.trim();
+        if (cityName) {
+            fetchWeather(cityName);
+        }
+        else{
+            alert("Please enter a city name")
+        }
+})
 
 // Fetch default city's weather on load
 fetchWeather(city);
